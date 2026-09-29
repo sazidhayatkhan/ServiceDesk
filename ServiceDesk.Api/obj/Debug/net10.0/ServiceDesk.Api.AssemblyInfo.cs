@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("820d72b1-a578-4bdf-9771-d1f5b9ba73cd")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceDesk.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d172992dade59dd29919502343490b39bf05349")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fe27de4db867d34c7893f962f404f5fba0b08b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceDesk.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceDesk.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

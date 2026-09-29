@@ -1,0 +1,46 @@
+# Build output
+
+bin/
+obj/
+
+# Visual Studio
+
+.vs/
+*.user
+*.suo
+
+# Rider
+
+.idea/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Environment variables
+
+.env
+.env.*
+!.env.example
+
+# Local development settings
+
+appsettings.Development.json
+
+# Logs
+
+*.log
+
+# Test results
+
+TestResults/
+coverage/
+
+# Publish output
+
+publish/
+
+# User secrets
+
+secrets.json
