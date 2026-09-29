@@ -28,4 +28,15 @@ public class RequestsController : ControllerBase
     {
         return Ok(await _service.GetAllAsync());
     }
+
+    [HttpPatch("{id}/status")]
+    public async Task<IActionResult> UpdateStatus(
+    Guid id,
+    UpdateRequestStatus request)
+    {
+        var serviceRequest =
+            await _service.UpdateStatusAsync(id, request.Status);
+
+        return Ok(serviceRequest);
+    }
 }

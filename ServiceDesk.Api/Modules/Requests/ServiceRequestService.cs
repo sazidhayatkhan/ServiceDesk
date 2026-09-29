@@ -45,4 +45,39 @@ public class ServiceRequestService
     {
         return _repository.GetAllAsync();
     }
+
+    public async Task<ServiceRequest> UpdateStatusAsync(
+    Guid id,
+    string status)
+    {
+        var request = await _repository.GetByIdAsync(id);
+
+        if (request is null)
+        {
+            throw new Exception("Service request not found.");
+        }
+
+        var allowedStatuses = new[]
+        {
+        "Pending",
+        "InProgress",
+        "Completed"
+    };
+
+        if (!allowedStatuses.Contains(status))
+        {
+            throw new Exception("Invalid status.");
+        }
+
+        request.Status = status;
+
+        if (status == "Completed")
+        {
+            request.CompletedAt = DateTime.UtcNow;
+        }
+
+        await _repository.SaveChangesAsync();
+
+        return request;
+    }
 }
