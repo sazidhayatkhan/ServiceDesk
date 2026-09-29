@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ServiceDesk.Api.Data;
+using ServiceDesk.Api.Modules.Locations;
 using ServiceDesk.Api.Modules.Users;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<UserService>();
+
+builder.Services.AddScoped<LocationRepository>();
+builder.Services.AddScoped<LocationService>();
 
 var app = builder.Build();
 
