@@ -31,3 +31,4 @@ E:\personal\ServiceDesk\ServiceDesk.Api\obj\Debug\net10.0\refint\ServiceDesk.Api
 E:\personal\ServiceDesk\ServiceDesk.Api\obj\Debug\net10.0\ServiceDesk.Api.pdb
 E:\personal\ServiceDesk\ServiceDesk.Api\obj\Debug\net10.0\ServiceDesk.Api.genruntimeconfig.cache
 E:\personal\ServiceDesk\ServiceDesk.Api\obj\Debug\net10.0\ref\ServiceDesk.Api.dll
+E:\personal\ServiceDesk\ServiceDesk.Api\obj\Debug\net10.0\ServiceDesk.Api.sourcelink.json
