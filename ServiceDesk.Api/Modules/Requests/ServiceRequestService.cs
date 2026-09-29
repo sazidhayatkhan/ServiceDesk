@@ -54,7 +54,8 @@ public class ServiceRequestService
 
         if (request is null)
         {
-            throw new Exception("Service request not found.");
+            throw new KeyNotFoundException(
+        "Service request not found.");
         }
 
         var allowedStatuses = new[]
@@ -66,7 +67,8 @@ public class ServiceRequestService
 
         if (!allowedStatuses.Contains(status))
         {
-            throw new Exception("Invalid status.");
+            throw new ArgumentException(
+       "Invalid status.");
         }
 
         request.Status = status;

@@ -31,11 +31,13 @@ public class RequestsController : ControllerBase
 
     [HttpPatch("{id}/status")]
     public async Task<IActionResult> UpdateStatus(
-    Guid id,
-    UpdateRequestStatus request)
+       Guid id,
+       UpdateRequestStatus request)
     {
         var serviceRequest =
-            await _service.UpdateStatusAsync(id, request.Status);
+            await _service.UpdateStatusAsync(
+                id,
+                request.Status);
 
         return Ok(serviceRequest);
     }

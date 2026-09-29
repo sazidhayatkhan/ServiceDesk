@@ -3,6 +3,7 @@ using ServiceDesk.Api.Data;
 using ServiceDesk.Api.Modules.Locations;
 using ServiceDesk.Api.Modules.Requests;
 using ServiceDesk.Api.Modules.Users;
+using ServiceDesk.Api.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,7 @@ builder.Services.AddScoped<ServiceRequestRepository>();
 builder.Services.AddScoped<ServiceRequestService>();
 
 var app = builder.Build();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
