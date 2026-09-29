@@ -7,6 +7,21 @@ public class ServiceRequestService
     private readonly ServiceRequestRepository _repository;
     private readonly LocationRepository _locationRepository;
 
+    private static ServiceRequestResponse ToResponse(
+    ServiceRequest request)
+    {
+        return new ServiceRequestResponse
+        {
+            Id = request.Id,
+            LocationId = request.LocationId,
+            AssignedUserId = request.AssignedUserId,
+            Description = request.Description,
+            Status = request.Status,
+            CreatedAt = request.CreatedAt,
+            CompletedAt = request.CompletedAt
+        };
+    }
+
     public ServiceRequestService(
         ServiceRequestRepository repository,
         LocationRepository locationRepository)
@@ -15,7 +30,7 @@ public class ServiceRequestService
         _locationRepository = locationRepository;
     }
 
-    public async Task<ServiceRequest> CreateAsync(
+    public async Task<ServiceRequestResponse> CreateAsync(
         CreateServiceRequest request)
     {
         var location =
@@ -38,15 +53,19 @@ public class ServiceRequestService
         await _repository.AddAsync(serviceRequest);
         await _repository.SaveChangesAsync();
 
-        return serviceRequest;
+        return ToResponse(serviceRequest);
     }
 
-    public Task<List<ServiceRequest>> GetAllAsync()
+    public async Task<List<ServiceRequestResponse>> GetAllAsync()
     {
-        return _repository.GetAllAsync();
+        var requests = await _repository.GetAllAsync();
+
+        return requests
+            .Select(ToResponse)
+            .ToList();
     }
 
-    public async Task<ServiceRequest> UpdateStatusAsync(
+    public async Task<ServiceRequestResponse> UpdateStatusAsync(
     Guid id,
     string status)
     {
@@ -80,6 +99,6 @@ public class ServiceRequestService
 
         await _repository.SaveChangesAsync();
 
-        return request;
+        return ToResponse(request);
     }
 }
