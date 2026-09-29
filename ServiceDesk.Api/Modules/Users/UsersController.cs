@@ -18,6 +18,13 @@ public class UsersController : ControllerBase
     {
         var user = await _userService.CreateAsync(request);
 
-        return Ok(user);
+        return Ok(new
+        {
+            user.Id,
+            user.Name,
+            user.Email,
+            user.Role,
+            user.CreatedAt
+        });
     }
 }

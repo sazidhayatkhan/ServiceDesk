@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9vBYhiEs2N4=",
+  "dgSpecHash": "+NddchLnMMM=",
   "success": true,
   "projectFilePath": "E:\\personal\\ServiceDesk\\ServiceDesk.Api\\ServiceDesk.Api.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\sazid\\.nuget\\packages\\microsoft.entityframeworkcore.design\\10.0.12\\microsoft.entityframeworkcore.design.10.0.12.nupkg.sha512",
     "C:\\Users\\sazid\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\10.0.12\\microsoft.entityframeworkcore.relational.10.0.12.nupkg.sha512",
     "C:\\Users\\sazid\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.12\\microsoft.extensions.dependencymodel.10.0.12.nupkg.sha512",
+    "C:\\Users\\sazid\\.nuget\\packages\\microsoft.extensions.identity.core\\10.0.12\\microsoft.extensions.identity.core.10.0.12.nupkg.sha512",
     "C:\\Users\\sazid\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
     "C:\\Users\\sazid\\.nuget\\packages\\microsoft.visualstudio.solutionpersistence\\1.0.52\\microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512",
     "C:\\Users\\sazid\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
@@ -34,6 +35,18 @@
     "C:\\Users\\sazid\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.Extensions.Identity.Core will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "E:\\personal\\ServiceDesk\\ServiceDesk.Api\\ServiceDesk.Api.csproj",
+      "warningLevel": 1,
+      "filePath": "E:\\personal\\ServiceDesk\\ServiceDesk.Api\\ServiceDesk.Api.csproj",
+      "libraryId": "Microsoft.Extensions.Identity.Core",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
     {
       "code": "NU1903",
       "level": "Warning",
