@@ -9,18 +9,25 @@ public class UserService
         _userRepository = userRepository;
     }
 
-    public async Task<User> CreateAsync(User user)
+    public async Task<User> CreateAsync(CreateUserRequest request)
     {
         var existingUser =
-            await _userRepository.GetByEmailAsync(user.Email);
+            await _userRepository.GetByEmailAsync(request.Email);
 
         if (existingUser is not null)
         {
             throw new Exception("Email already exists.");
         }
 
-        user.Id = Guid.NewGuid();
-        user.CreatedAt = DateTime.UtcNow;
+        var user = new User
+        {
+            Id = Guid.NewGuid(),
+            Name = request.Name,
+            Email = request.Email,
+            PasswordHash = request.Password,
+            Role = "Staff",
+            CreatedAt = DateTime.UtcNow
+        };
 
         await _userRepository.AddAsync(user);
         await _userRepository.SaveChangesAsync();
