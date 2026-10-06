@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: servicedesk-api
+  labels:
+    app: servicedesk-api
+
+spec:
+  containers:
+    - name: api
+      image: localhost:5001/servicedesk-api:1.0
+      ports:
+        - containerPort: 8080
+
+      env:
+        - name: ConnectionStrings__DefaultConnection
+          valueFrom:
+            secretKeyRef:
+              name: servicedesk-secrets
+              key: ConnectionStrings__DefaultConnection

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceDesk.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9928673ad64ef256dbc201f6c6720695c45cb5dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d599342827b8278a3a831ded4000e4e0434a93ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceDesk.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceDesk.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

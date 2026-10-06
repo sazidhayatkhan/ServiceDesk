@@ -2245,11 +2245,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\personal\\ServiceDesk\\ServiceDesk.Api\\ServiceDesk.Api.csproj",
+      "projectUniqueName": "E:\\personal\\Asp.Net\\ServiceDesk\\ServiceDesk.Api\\ServiceDesk.Api.csproj",
       "projectName": "ServiceDesk.Api",
-      "projectPath": "E:\\personal\\ServiceDesk\\ServiceDesk.Api\\ServiceDesk.Api.csproj",
+      "projectPath": "E:\\personal\\Asp.Net\\ServiceDesk\\ServiceDesk.Api\\ServiceDesk.Api.csproj",
       "packagesPath": "C:\\Users\\sazid\\.nuget\\packages\\",
-      "outputPath": "E:\\personal\\ServiceDesk\\ServiceDesk.Api\\obj\\",
+      "outputPath": "E:\\personal\\Asp.Net\\ServiceDesk\\ServiceDesk.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sazid\\AppData\\Roaming\\NuGet\\NuGet.Config"
